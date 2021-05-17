@@ -1,0 +1,34 @@
+ make
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT vtysh_cmd.o -MD -MP -MF .deps/vtysh_cmd.Tpo -c -o vtysh_cmd.o vtysh_cmd.c
+vtysh_cmd.c: In function ‘no_debug_ospf6_neighbor’:
+vtysh_cmd.c:17475: error: parameter ‘ospf_default_information_originate_always_cmd_vtysh’ is initialized
+vtysh_cmd.c:17481: error: parameter ‘ipv6_access_list_any_host_udp_eq_rang_sequence_cmd_vtysh’ is initialized
+vtysh_cmd.c:17497: error: parameter ‘no_access_list_udp_cmd_vtysh’ is initialized
+vtysh_cmd.c:17516: error: parameter ‘undebug_bgp_normal_cmd_vtysh’ is initialized
+vtysh_cmd.c:17521: error: parameter ‘aggregate_address_mask_cmd_vtysh’ is initialized
+vtysh_cmd.c:17527: error: parameter ‘ospf_auto_cost_reference_bandwidth_cmd_vtysh’ is initialized
+vtysh_cmd.c:17533: error: parameter ‘access_list_any_host_icmp_sequence_cmd_vtysh’ is initialized
+vtysh_cmd.c:17543: error: parameter ‘ipv6_nd_prefix_noval_cmd_vtysh’ is initialized
+vtysh_cmd.c:17552: error: parameter ‘clear_bgp_external_soft_out_cmd_vtysh’ is initialized
+vtysh_cmd.c:17560: error: parameter ‘ripng_aggregate_address_cmd_vtysh’ is initialized
+vtysh_cmd.c:17565: error: parameter ‘show_ipv6_ospf6_route_cmd_vtysh’ is initialized
+vtysh_cmd.c:17573: error: parameter ‘no_neighbor_maximum_prefix_warning_cmd_vtysh’ is initialized
+vtysh_cmd.c:17582: error: parameter ‘redistribute_ospf6_cmd_vtysh’ is initialized
+vtysh_cmd.c:17587: error: parameter ‘ipv6_access_list_tcp_cmd_vtysh’ is initialized
+vtysh_cmd.c:17604: error: parameter ‘ipv6_route_ifname_flags_cmd_vtysh’ is initialized
+vtysh_cmd.c:17614: error: parameter ‘no_lsp_gen_interval_l1_arg_cmd_vtysh’ is initialized
+vtysh_cmd.c:17621: error: parameter ‘clear_bgp_peer_in_cmd_vtysh’ is initialized
+vtysh_cmd.c:17629: error: parameter ‘show_ipv6_prefix_list_detail_name_cmd_vtysh’ is initialized
+vtysh_cmd.c:17637: error: parameter ‘clear_ip_bgp_all_in_cmd_vtysh’ is initialized
+vtysh_cmd.c:17645: error: parameter ‘no_ospf_area_vlink_md5_cmd_vtysh’ is initialized
+vtysh_cmd.c:17652: error: parameter ‘show_ip_prefix_list_summary_cmd_vtysh’ is initialized
+vtysh_cmd.c:17659: error: parameter ‘access_list_host_host_tcp_rang_blank_cmd_vtysh’ is initialized
+vtysh_cmd.c:17670: error: parameter ‘access_list_host_any_udp_rang_cmd_vtysh’ is initialized
+vtysh_cmd.c:17682: error: parameter ‘no_access_list_mask_any_udp_cmd_vtysh’ is initialized
+vtysh_cmd.c:17699: error: parameter ‘no_ospf_area_range_substitute_cmd_vtysh’ is initialized
+vtysh_cmd.c:17710: error: parameter ‘access_list_host_mask_udp_rang_eq_cmd_vtysh’ is initialized
+vtysh_cmd.c:17725: error: parameter ‘access_list_any_host_sequence_cmd_vtysh’ is initialized
+vtysh_cmd.c:17737: error: parameter ‘no_neighbor_attr_unchanged2_cmd_vtysh’ is initialized
+vtysh_cmd.c:17747: error: parameter ‘set_ip_nexthop_cmd_vtysh’ is initialized
+vtysh_cmd.c:17754: error: parameter ‘no_ipv6_access_list_any_mask_tcp_rang_blank_cmd_vtysh’ is initialized
+

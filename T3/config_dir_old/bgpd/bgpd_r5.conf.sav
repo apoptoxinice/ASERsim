@@ -1,0 +1,17 @@
+!
+! Zebra configuration saved from vty
+!   2019/10/20 20:59:14
+!
+password zebra
+!
+router bgp 5
+ bgp router-id 5.5.5.5
+ neighbor 2001:da8:26d:1116::2 remote-as 9
+ no neighbor 2001:da8:26d:1116::2 activate
+!
+ address-family ipv6
+ neighbor 2001:da8:26d:1116::2 activate
+ exit-address-family
+!
+line vty
+!

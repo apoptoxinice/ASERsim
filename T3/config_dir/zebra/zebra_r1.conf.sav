@@ -1,0 +1,11 @@
+!
+! Zebra configuration saved from vty
+!   2019/10/15 23:20:07
+!
+password zebra
+!
+interface r1-eth0
+ ipv6 nd suppress-ra
+interface r1-eth1
+ ipv6 nd suppress-ra
+!

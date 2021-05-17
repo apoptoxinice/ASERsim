@@ -1,0 +1,21 @@
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_flood.o -MD -MP -MF .deps/ospf6_flood.Tpo -c -o ospf6_flood.o ospf6_flood.c
+In file included from ../zebra/zserv.h:25,
+                 from ospf6_flood.c:34:
+../zebra/rib.h:311: warning: ‘struct thread’ declared inside parameter list
+../zebra/rib.h:311: warning: its scope is only this definition or declaration, which is probably not what you want
+In file included from ospf6_flood.c:34:
+../zebra/zserv.h:405:1: warning: "MIN" redefined
+In file included from ../lib/zebra.h:59,
+                 from ospf6_flood.c:22:
+/usr/include/sys/param.h:74:1: warning: this is the location of the previous definition
+ospf6_flood.c: In function ‘ospf6_increment_retrans_count’:
+ospf6_flood.c:178: error: ‘orig’ undeclared (first use in this function)
+ospf6_flood.c:178: error: (Each undeclared identifier is reported only once
+ospf6_flood.c:178: error: for each function it appears in.)
+ospf6_flood.c: At top level:
+ospf6_flood.c:822: warning: no previous prototype for ‘remove_xml_twod_lsa’
+ospf6_flood.c: In function ‘remove_xml_twod_lsa’:
+ospf6_flood.c:862: warning: implicit declaration of function ‘creat_rout_two_tb’
+ospf6_flood.c: In function ‘remove_intra_lsa’:
+ospf6_flood.c:884: warning: unused variable ‘rtn’
+make: *** [ospf6_flood.o] Error 1

@@ -1,0 +1,24 @@
+!
+! Zebra configuration saved from vty
+!   2019/10/20 21:03:47
+!
+password zebra
+!
+router bgp 7
+ bgp router-id 7.7.7.7
+ redistribute kernel
+ redistribute connected
+ redistribute static
+ redistribute ospf
+ neighbor 2001:da8:26d:1143::1 remote-as 2
+ no neighbor 2001:da8:26d:1143::1 activate
+!
+ address-family ipv6
+ redistribute connected
+ redistribute static
+ redistribute ospf6
+ neighbor 2001:da8:26d:1143::1 activate
+ exit-address-family
+!
+line vty
+!

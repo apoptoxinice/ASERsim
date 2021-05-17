@@ -1,0 +1,5 @@
+set logging file /var/log/quagga/gdb/debug_r4.txt
+set logging on
+run
+bt
+set logging off

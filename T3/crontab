@@ -1,0 +1,3 @@
+#/bin/sh
+find /var/log/quagga/ospf6d -name *ospf6d_r* -exec cp /dev/null {} \;
+find /var/log/quagga/ospf6dplus -name *ospf6dplus_r* -exec cp /dev/null {} \;
