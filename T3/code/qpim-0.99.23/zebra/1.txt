@@ -1,0 +1,553 @@
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT interface.o -MD -MP -MF .deps/interface.Tpo -c -o interface.o interface.c
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from interface.c:36:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from interface.c:23:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from interface.c:36:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from interface.c:23:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+interface.c:1633:5: warning: no previous prototype for ‘interface_AddressIsConfigured’ [-Wmissing-prototypes]
+ int interface_AddressIsConfigured(struct vty *vty, struct interface *ifp, struct prefix *p)
+     ^
+interface.c:1330:12: warning: ‘interface_configRecovery’ defined but not used [-Wunused-function]
+ static int interface_configRecovery(struct vty *vty, struct interface *ifp)
+            ^
+mv -f .deps/interface.Tpo .deps/interface.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT connected.o -MD -MP -MF .deps/connected.Tpo -c -o connected.o connected.c
+In file included from connected.c:29:0:
+rib.h:488:46: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ extern int zebra_4over6_nexthop_check(struct thread *thread);
+                                              ^
+rib.h:488:46: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from connected.c:34:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from connected.c:23:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from connected.c:34:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from connected.c:23:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/connected.Tpo .deps/connected.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT debug.o -MD -MP -MF .deps/debug.Tpo -c -o debug.o debug.c
+mv -f .deps/debug.Tpo .deps/debug.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT zebra_vty.o -MD -MP -MF .deps/zebra_vty.Tpo -c -o zebra_vty.o zebra_vty.c
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from zebra_vty.c:39:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from zebra_vty.c:22:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from zebra_vty.c:39:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from zebra_vty.c:22:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_add_pool’:
+zebra_vty.c:535:41: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry  *pLast;
+                                         ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_del_pool’:
+zebra_vty.c:661:41: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry  *pLast;
+                                         ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_add_source_list’:
+zebra_vty.c:755:41: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry  *pLast;
+                                         ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_del_source_list’:
+zebra_vty.c:852:41: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry  *pLast;
+                                         ^
+zebra_vty.c: In function ‘ip_nat_pool_lookup’:
+zebra_vty.c:946:28: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_pool_entry *pLast;
+                            ^
+zebra_vty.c: In function ‘ip_nat_source_list_lookup’:
+zebra_vty.c:972:29: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list *pLast;
+                             ^
+zebra_vty.c: In function ‘no_tunnel4o6_tcp_mss’:
+zebra_vty.c:4989:39: warning: variable ‘pNew’ set but not used [-Wunused-but-set-variable]
+     struct zebra_4over6_tunnel_entry *pNew;
+                                       ^
+zebra_vty.c: In function ‘send_control_msg_kernel’:
+zebra_vty.c:7030:9: warning: variable ‘ret’ set but not used [-Wunused-but-set-variable]
+     int ret =0;
+         ^
+zebra_vty.c: In function ‘del_ecn_info’:
+zebra_vty.c:8071:34: warning: variable ‘p_front’ set but not used [-Wunused-but-set-variable]
+         struct if_politic_qdisc *p_front = p;
+                                  ^
+zebra_vty.c: In function ‘write_message_if_compre_file’:
+zebra_vty.c:8230:9: warning: variable ‘n’ set but not used [-Wunused-but-set-variable]
+     int n = 0;
+         ^
+zebra_vty.c: In function ‘ip_nat_config_pool’:
+zebra_vty.c:8472:28: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_pool_entry *pLast;
+                            ^
+zebra_vty.c: In function ‘ip_nat_config_source_list’:
+zebra_vty.c:8497:29: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list *pLast;
+                             ^
+zebra_vty.c: In function ‘ip_nat_config_source_list_pool’:
+zebra_vty.c:8522:40: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry *pLast;
+                                        ^
+mv -f .deps/zebra_vty.Tpo .deps/zebra_vty.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT kernel_null.o -MD -MP -MF .deps/kernel_null.Tpo -c -o kernel_null.o kernel_null.c
+In file included from ../zebra/zserv.h:25:0,
+                 from kernel_null.c:6:
+../zebra/rib.h:488:46: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ extern int zebra_4over6_nexthop_check(struct thread *thread);
+                                              ^
+../zebra/rib.h:488:46: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from kernel_null.c:6:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from kernel_null.c:3:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from kernel_null.c:6:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from kernel_null.c:3:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/kernel_null.Tpo .deps/kernel_null.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT redistribute_null.o -MD -MP -MF .deps/redistribute_null.Tpo -c -o redistribute_null.o redistribute_null.c
+In file included from redistribute_null.c:2:0:
+../zebra/rib.h:488:46: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ extern int zebra_4over6_nexthop_check(struct thread *thread);
+                                              ^
+../zebra/rib.h:488:46: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from redistribute_null.c:3:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from redistribute_null.c:1:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from redistribute_null.c:3:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from redistribute_null.c:1:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/redistribute_null.Tpo .deps/redistribute_null.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ioctl_null.o -MD -MP -MF .deps/ioctl_null.Tpo -c -o ioctl_null.o ioctl_null.c
+In file included from ioctl_null.c:3:0:
+../zebra/rib.h:488:46: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ extern int zebra_4over6_nexthop_check(struct thread *thread);
+                                              ^
+../zebra/rib.h:488:46: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+mv -f .deps/ioctl_null.Tpo .deps/ioctl_null.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT misc_null.o -MD -MP -MF .deps/misc_null.Tpo -c -o misc_null.o misc_null.c
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from ../zebra/rtadv.h:27,
+                 from misc_null.c:4:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from misc_null.c:1:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from ../zebra/rtadv.h:27,
+                 from misc_null.c:4:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from misc_null.c:1:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/misc_null.Tpo .deps/misc_null.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -pie -rdynamic -o testzebra test_main.o zebra_rib.o interface.o connected.o debug.o zebra_vty.o kernel_null.o redistribute_null.o ioctl_null.o misc_null.o ../lib/libzebra.la   -lcrypt   -lrt
+libtool: link: gcc -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -pie -rdynamic -o .libs/testzebra test_main.o zebra_rib.o interface.o connected.o debug.o zebra_vty.o kernel_null.o redistribute_null.o ioctl_null.o misc_null.o  ../lib/.libs/libzebra.so -lcrypt -lrt -Wl,-rpath -Wl,/usr/local/lib
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT zserv.o -MD -MP -MF .deps/zserv.Tpo -c -o zserv.o zserv.c
+In file included from zserv.c:40:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from zserv.c:22:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from zserv.c:40:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from zserv.c:22:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/zserv.Tpo .deps/zserv.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT main.o -MD -MP -MF .deps/main.Tpo -c -o main.o main.c
+In file included from main.c:37:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from main.c:22:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from main.c:37:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from main.c:22:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/main.Tpo .deps/main.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT zebra_routemap.o -MD -MP -MF .deps/zebra_routemap.Tpo -c -o zebra_routemap.o zebra_routemap.c
+In file included from zebra_routemap.c:26:0:
+rib.h:488:46: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ extern int zebra_4over6_nexthop_check(struct thread *thread);
+                                              ^
+rib.h:488:46: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from zebra_routemap.c:32:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from zebra_routemap.c:22:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from zebra_routemap.c:32:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from zebra_routemap.c:22:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/zebra_routemap.Tpo .deps/zebra_routemap.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT redistribute.o -MD -MP -MF .deps/redistribute.Tpo -c -o redistribute.o redistribute.c
+In file included from redistribute.c:35:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from redistribute.c:22:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from redistribute.c:35:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from redistribute.c:22:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/redistribute.Tpo .deps/redistribute.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT rtadv.o -MD -MP -MF .deps/rtadv.Tpo -c -o rtadv.o rtadv.c
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from rtadv.c:35:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from rtadv.c:23:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from rtadv.c:35:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from rtadv.c:23:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/rtadv.Tpo .deps/rtadv.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT zebra_snmp.o -MD -MP -MF .deps/zebra_snmp.Tpo -c -o zebra_snmp.o zebra_snmp.c
+mv -f .deps/zebra_snmp.Tpo .deps/zebra_snmp.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT irdp_main.o -MD -MP -MF .deps/irdp_main.Tpo -c -o irdp_main.o irdp_main.c
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from irdp_main.c:55:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from irdp_main.c:37:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from irdp_main.c:55:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from irdp_main.c:37:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/irdp_main.Tpo .deps/irdp_main.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT irdp_interface.o -MD -MP -MF .deps/irdp_interface.Tpo -c -o irdp_interface.o irdp_interface.c
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from irdp_interface.c:53:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from irdp_interface.c:37:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from irdp_interface.c:53:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from irdp_interface.c:37:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+irdp_interface.c: In function ‘no_ip_irdp_address_preference’:
+irdp_interface.c:665:9: warning: variable ‘pref’ set but not used [-Wunused-but-set-variable]
+     int pref;
+         ^
+mv -f .deps/irdp_interface.Tpo .deps/irdp_interface.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT irdp_packet.o -MD -MP -MF .deps/irdp_packet.Tpo -c -o irdp_packet.o irdp_packet.c
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from irdp_packet.c:54:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from irdp_packet.c:37:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from ../zebra/redistribute.h:27:0,
+                 from ../zebra/interface.h:25,
+                 from irdp_packet.c:54:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from irdp_packet.c:37:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/irdp_packet.Tpo .deps/irdp_packet.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT router-id.o -MD -MP -MF .deps/router-id.Tpo -c -o router-id.o router-id.c
+In file included from router-id.c:40:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from router-id.c:24:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from router-id.c:40:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from router-id.c:24:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+In file included from ../lib/if.h:24:0,
+                 from router-id.c:26:
+router-id.c: In function ‘router_id_get’:
+../lib/linklist.h:59:26: warning: the address of ‘rid_lo_sorted_list’ will always evaluate as ‘true’ [-Waddress]
+ #define listtail(X) ((X) ? ((X)->tail) : NULL)
+                          ^
+router-id.c:91:16: note: in expansion of macro ‘listtail’
+         node = listtail (&rid_lo_sorted_list);
+                ^
+../lib/linklist.h:59:26: warning: the address of ‘rid_all_sorted_list’ will always evaluate as ‘true’ [-Waddress]
+ #define listtail(X) ((X) ? ((X)->tail) : NULL)
+                          ^
+router-id.c:97:16: note: in expansion of macro ‘listtail’
+         node = listtail (&rid_all_sorted_list);
+                ^
+mv -f .deps/router-id.Tpo .deps/router-id.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT zebra_fpm.o -MD -MP -MF .deps/zebra_fpm.Tpo -c -o zebra_fpm.o zebra_fpm.c
+mv -f .deps/zebra_fpm.Tpo .deps/zebra_fpm.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT zebra_fpm_netlink.o -MD -MP -MF .deps/zebra_fpm_netlink.Tpo -c -o zebra_fpm_netlink.o zebra_fpm_netlink.c
+In file included from zebra_fpm_netlink.c:29:0:
+rib.h:488:46: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ extern int zebra_4over6_nexthop_check(struct thread *thread);
+                                              ^
+rib.h:488:46: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+mv -f .deps/zebra_fpm_netlink.Tpo .deps/zebra_fpm_netlink.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT if_netlink.o -MD -MP -MF .deps/if_netlink.Tpo -c -o if_netlink.o if_netlink.c
+In file included from ../zebra/zserv.h:25:0,
+                 from if_netlink.c:25:
+../zebra/rib.h:488:46: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ extern int zebra_4over6_nexthop_check(struct thread *thread);
+                                              ^
+../zebra/rib.h:488:46: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from if_netlink.c:25:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from if_netlink.c:23:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from if_netlink.c:25:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from if_netlink.c:23:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/if_netlink.Tpo .deps/if_netlink.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT rt_netlink.o -MD -MP -MF .deps/rt_netlink.Tpo -c -o rt_netlink.o rt_netlink.c
+In file included from rt_netlink.c:36:0:
+rib.h:488:46: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ extern int zebra_4over6_nexthop_check(struct thread *thread);
+                                              ^
+rib.h:488:46: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from rt_netlink.c:40:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from rt_netlink.c:22:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from rt_netlink.c:40:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from rt_netlink.c:22:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+rt_netlink.c: In function ‘ip_address_delete_from_kernel’:
+rt_netlink.c:1074:13: warning: implicit declaration of function ‘if_unset_prefix’ [-Wimplicit-function-declaration]
+             ret = if_unset_prefix (ifp, connected);
+             ^
+rt_netlink.c:1099:13: warning: implicit declaration of function ‘if_prefix_delete_ipv6’ [-Wimplicit-function-declaration]
+             ret = if_prefix_delete_ipv6(ifp, connected);
+             ^
+rt_netlink.c: At top level:
+rt_netlink.c:1270:5: warning: no previous prototype for ‘interface_lookup_netlink’ [-Wmissing-prototypes]
+ int interface_lookup_netlink (void)
+     ^
+rt_netlink.c:1305:5: warning: no previous prototype for ‘netlink_route_read’ [-Wmissing-prototypes]
+ int netlink_route_read (void)
+     ^
+rt_netlink.c:72:20: warning: ‘nexthop_types_desc’ defined but not used [-Wunused-variable]
+ static const char *nexthop_types_desc[] =
+                    ^
+rt_netlink.c:1058:12: warning: ‘ip_address_delete_from_kernel’ defined but not used [-Wunused-function]
+ static int ip_address_delete_from_kernel(struct interface *ifp)
+            ^
+mv -f .deps/rt_netlink.Tpo .deps/rt_netlink.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT rtread_netlink.o -MD -MP -MF .deps/rtread_netlink.Tpo -c -o rtread_netlink.o rtread_netlink.c
+In file included from ../zebra/zserv.h:25:0,
+                 from rtread_netlink.c:25:
+../zebra/rib.h:488:46: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ extern int zebra_4over6_nexthop_check(struct thread *thread);
+                                              ^
+../zebra/rib.h:488:46: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from rtread_netlink.c:25:0:
+../zebra/zserv.h:274:0: warning: "NLMSG_ALIGNTO" redefined [enabled by default]
+ #define NLMSG_ALIGNTO 4
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from rtread_netlink.c:23:
+/usr/include/linux/netlink.h:79:0: note: this is the location of the previous definition
+ #define NLMSG_ALIGNTO 4U
+ ^
+In file included from rtread_netlink.c:25:0:
+../zebra/zserv.h:277:0: warning: "NLMSG_LENGTH" redefined [enabled by default]
+ #define NLMSG_LENGTH(len) ((len)+NLMSG_ALIGN(NLMSG_HDRLEN))
+ ^
+In file included from ../lib/zebra.h:176:0,
+                 from rtread_netlink.c:23:
+/usr/include/linux/netlink.h:82:0: note: this is the location of the previous definition
+ #define NLMSG_LENGTH(len) ((len) + NLMSG_HDRLEN)
+ ^
+mv -f .deps/rtread_netlink.Tpo .deps/rtread_netlink.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -pie -rdynamic -o zebra zserv.o main.o interface.o connected.o zebra_rib.o zebra_routemap.o redistribute.o debug.o rtadv.o zebra_snmp.o zebra_vty.o irdp_main.o irdp_interface.o irdp_packet.o router-id.o zebra_fpm.o zebra_fpm_netlink.o ioctl.o ipforward_proc.o if_netlink.o  rt_netlink.o rtread_netlink.o   ../lib/libzebra.la   -lcrypt   -lrt
+libtool: link: gcc -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -pie -rdynamic -o .libs/zebra zserv.o main.o interface.o connected.o zebra_rib.o zebra_routemap.o redistribute.o debug.o rtadv.o zebra_snmp.o zebra_vty.o irdp_main.o irdp_interface.o irdp_packet.o router-id.o zebra_fpm.o zebra_fpm_netlink.o ioctl.o ipforward_proc.o if_netlink.o rt_netlink.o rtread_netlink.o  ../lib/.libs/libzebra.so -lcrypt -lrt -Wl,-rpath -Wl,/usr/local/lib
+interface.o: In function `show_interface':
+/root/2019/sangmeng/qpim-0.99.23/zebra/interface.c:1135: undefined reference to `ifstat_update_proc'
+collect2: error: ld returned 1 exit status
+make: *** [zebra] Error 1

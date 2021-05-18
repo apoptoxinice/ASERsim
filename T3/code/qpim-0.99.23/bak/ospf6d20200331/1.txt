@@ -1,0 +1,43 @@
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_flood.o -MD -MP -MF .deps/ospf6_flood.Tpo -c -o ospf6_flood.o ospf6_flood.c
+In file included from ../lib/zebra.h:151:0,
+                 from ospf6_flood.c:22:
+ospf6_flood.c: In function ‘ospf6_install_lsa_for_leaving’:
+ospf6_lsa.h:118:88: warning: integer overflow in expression [-Woverflow]
+ #define OSPF6_LSA_IS_SEQWRAP(L) ((L)->header->seqnum == htonl(OSPF_MAX_SEQUENCE_NUMBER + 1))
+                                                                                        ^
+ospf6_flood.c:300:9: note: in expansion of macro ‘OSPF6_LSA_IS_SEQWRAP’
+     if (OSPF6_LSA_IS_SEQWRAP(lsa) &&
+         ^
+ospf6_flood.c: In function ‘ospf6_install_lsa’:
+ospf6_lsa.h:118:88: warning: integer overflow in expression [-Woverflow]
+ #define OSPF6_LSA_IS_SEQWRAP(L) ((L)->header->seqnum == htonl(OSPF_MAX_SEQUENCE_NUMBER + 1))
+                                                                                        ^
+ospf6_flood.c:419:9: note: in expansion of macro ‘OSPF6_LSA_IS_SEQWRAP’
+     if (OSPF6_LSA_IS_SEQWRAP(lsa) &&
+         ^
+ospf6_flood.c: In function ‘osfp6_orginate_zone_lsa’:
+ospf6_flood.c:1270:19: error: ‘struct pbr_list’ has no member named ‘prev_attached_num’
+         if ((plist->prev_attached_num == 0
+                   ^
+ospf6_flood.c:1272:22: error: ‘struct pbr_list’ has no member named ‘prev_attached_num’
+             || (plist->prev_attached_num == 1 
+                      ^
+ospf6_flood.c: In function ‘ospf6_add_path_num_to_list’:
+ospf6_flood.c:1354:30: error: ‘struct pbr_list’ has no member named ‘prev_attached_num’
+                         plist->prev_attached_num =  plist->attached_num;
+                              ^
+ospf6_flood.c:1368:22: error: ‘struct pbr_list’ has no member named ‘prev_attached_num’
+                 plist->prev_attached_num =  plist->attached_num;
+                      ^
+ospf6_flood.c:1386:15: error: ‘struct pbr_list’ has no member named ‘prev_attached_num’
+     plist_node->prev_attached_num = 0;
+               ^
+ospf6_flood.c: In function ‘ospf6_maybe_del_attached_num_from_list’:
+ospf6_flood.c:1430:26: error: ‘struct pbr_list’ has no member named ‘prev_attached_num’
+                     plist->prev_attached_num =  plist->attached_num;
+                          ^
+ospf6_flood.c: In function ‘ospf6_del_attached_num_from_list’:
+ospf6_flood.c:1464:26: error: ‘struct pbr_list’ has no member named ‘prev_attached_num’
+                     plist->prev_attached_num =  plist->attached_num;
+                          ^
+make: *** [ospf6_flood.o] Error 1

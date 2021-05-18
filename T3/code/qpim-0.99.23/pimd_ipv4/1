@@ -1,0 +1,4 @@
+:%s/\<PIMSM_MRT_ENTRY_T\>/struct pimsm_mrt_entry/g
+:%s/\<PIMSM_GRP_ENTRY_T\>/struct pimsm_grp_entry/g
+:%s/\<PIMSM_ASSERT_METRIC_T\>/struct pimsm_assert_metric/g
+:%s/\<PIMSM_ASSERT_IF_T\>/struct pimsm_assert_if/g

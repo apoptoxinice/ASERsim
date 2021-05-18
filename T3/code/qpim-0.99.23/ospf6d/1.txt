@@ -1,0 +1,73 @@
+{
+    struct ospf6_zone_lsa *zone_lsa;
+    struct ospf6_zone_aaidesc *aaidesc;
+    //char *start, *end;
+    char *start, *end, *current = NULL;
+    char buf1[INET_ADDRSTRLEN];
+
+    if (lsa)
+    {
+        zone_lsa = (struct ospf6_zone_lsa *)
+                   ((char *) lsa->header + sizeof (struct ospf6_lsa_header));
+        start = (char *) zone_lsa + sizeof (struct ospf6_zone_lsa);
+        end = (char *) lsa->header + ntohs (lsa->header->length);
+
+        current = start;
+
+        aaidesc = (struct ospf6_zone_aaidesc *)
+                  (start + pos*(sizeof (struct ospf6_zone_aaidesc)));
+        do
+        {
+            aaidesc = (struct ospf6_zone_aaidesc *) current;
+
+            if (current + sizeof(struct ospf6_zone_aaidesc) > end)
+                return NULL;
+
+            if (cnt < pos)
+            {
+		//add 2020
+                cnt++;
+                current = start + cnt * sizeof(struct ospf6_zone_aaidesc);
+                //DG("cnt:%d pos:%d, current:%p.\n",cnt, pos, current);
+            }
+            else
+            {
+		if (buf && (buflen > INET_ADDRSTRLEN*2))
+            	{
+                inet_ntop (AF_INET, &aaidesc->area_id,
+                           buf1, sizeof(buf1));
+                sprintf (buf, "%s", buf1);
+            	}
+                return (buf);
+            }
+        }
+        while (current <= end);
+    }
+
+
+#if 0
+
+    if (lsa)
+    {
+        zone_lsa = (struct ospf6_zone_lsa *)
+                   ((char *) lsa->header + sizeof (struct ospf6_lsa_header));
+        start = (char *) zone_lsa + sizeof (struct ospf6_zone_lsa);
+        end = (char *) lsa->header + ntohs (lsa->header->length);
+
+        aaidesc = (struct ospf6_zone_aaidesc *)
+                  (start + pos*(sizeof (struct ospf6_zone_aaidesc)));
+        if ((char *)aaidesc < end)
+        {
+            if (buf && (buflen > INET_ADDRSTRLEN*2))
+            {
+                inet_ntop (AF_INET, &aaidesc->area_id,
+                           buf1, sizeof(buf1));
+                sprintf (buf, "%s", buf1);
+            }
+        }
+        else
+            return NULL;
+    }
+#endif
+    return buf;
+}

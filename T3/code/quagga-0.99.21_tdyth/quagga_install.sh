@@ -1,5 +1,5 @@
 #!/bin/bash
-./configure --enable-vtysh --enable-zebra --enable-bgpd --enable-user=root --enable-group=root -enable-vty-group=root
+./configure --enable-vtysh --enable-zebra --enable-bgpd --enable-user=ice --enable-group=ice -enable-vty-group=ice
 #make clean
 #make
 #make install

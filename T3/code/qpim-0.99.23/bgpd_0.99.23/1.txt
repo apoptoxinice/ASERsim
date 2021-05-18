@@ -1,0 +1,94 @@
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT bgp_packet.o -MD -MP -MF .deps/bgp_packet.Tpo -c -o bgp_packet.o bgp_packet.c
+In file included from bgp_packet.c:21:0:
+bgp_packet.c: In function ‘bgp_update_packet’:
+../lib/zebra.h:575:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((((struct fifo *)(F))->next == (struct fifo *)(F)) \
+              ^
+bgp_packet.c:166:11: note: in expansion of macro ‘FIFO_HEAD’
+     adv = FIFO_HEAD (&peer->sync[afi][safi]->update);
+           ^
+bgp_packet.c:241:26: warning: variable ‘from’ set but not used [-Wunused-but-set-variable]
+             struct peer *from = NULL;
+                          ^
+bgp_packet.c:157:22: warning: variable ‘nexthop’ set but not used [-Wunused-but-set-variable]
+     struct in6_addr *nexthop = NULL;
+                      ^
+In file included from bgp_packet.c:21:0:
+bgp_packet.c: In function ‘bgp_withdraw_packet’:
+../lib/zebra.h:575:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((((struct fifo *)(F))->next == (struct fifo *)(F)) \
+              ^
+bgp_packet.c:377:19: note: in expansion of macro ‘FIFO_HEAD’
+     while ((adv = FIFO_HEAD (&peer->sync[afi][safi]->withdraw)) != NULL)
+                   ^
+bgp_packet.c:366:19: warning: unused variable ‘pos’ [-Wunused-variable]
+     unsigned long pos;
+                   ^
+bgp_packet.c: In function ‘bgp_default_update_send’:
+bgp_packet.c:509:5: warning: passing argument 6 of ‘bgp_packet_attribute’ makes integer from pointer without a cast [enabled by default]
+     total_attr_len = bgp_packet_attribute (NULL, peer, s, attr, &p, NULL, afi, safi, from, NULL, NULL);
+     ^
+In file included from bgp_packet.c:37:0:
+../bgpd/bgp_attr.h:166:19: note: expected ‘afi_t’ but argument is of type ‘void *’
+ extern bgp_size_t bgp_packet_attribute (struct bgp *bgp, struct peer *,
+                   ^
+bgp_packet.c:509:5: warning: passing argument 8 of ‘bgp_packet_attribute’ makes pointer from integer without a cast [enabled by default]
+     total_attr_len = bgp_packet_attribute (NULL, peer, s, attr, &p, NULL, afi, safi, from, NULL, NULL);
+     ^
+In file included from bgp_packet.c:37:0:
+../bgpd/bgp_attr.h:166:19: note: expected ‘struct peer *’ but argument is of type ‘safi_t’
+ extern bgp_size_t bgp_packet_attribute (struct bgp *bgp, struct peer *,
+                   ^
+bgp_packet.c:509:5: warning: passing argument 9 of ‘bgp_packet_attribute’ from incompatible pointer type [enabled by default]
+     total_attr_len = bgp_packet_attribute (NULL, peer, s, attr, &p, NULL, afi, safi, from, NULL, NULL);
+     ^
+In file included from bgp_packet.c:37:0:
+../bgpd/bgp_attr.h:166:19: note: expected ‘struct prefix_rd *’ but argument is of type ‘struct peer *’
+ extern bgp_size_t bgp_packet_attribute (struct bgp *bgp, struct peer *,
+                   ^
+bgp_packet.c:509:5: error: too many arguments to function ‘bgp_packet_attribute’
+     total_attr_len = bgp_packet_attribute (NULL, peer, s, attr, &p, NULL, afi, safi, from, NULL, NULL);
+     ^
+In file included from bgp_packet.c:37:0:
+../bgpd/bgp_attr.h:166:19: note: declared here
+ extern bgp_size_t bgp_packet_attribute (struct bgp *bgp, struct peer *,
+                   ^
+In file included from bgp_packet.c:21:0:
+bgp_packet.c: In function ‘bgp_write_packet’:
+../lib/zebra.h:575:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((((struct fifo *)(F))->next == (struct fifo *)(F)) \
+              ^
+bgp_packet.c:635:19: note: in expansion of macro ‘FIFO_HEAD’
+             adv = FIFO_HEAD (&peer->sync[afi][safi]->withdraw);
+                   ^
+../lib/zebra.h:575:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((((struct fifo *)(F))->next == (struct fifo *)(F)) \
+              ^
+bgp_packet.c:647:19: note: in expansion of macro ‘FIFO_HEAD’
+             adv = FIFO_HEAD (&peer->sync[afi][safi]->update);
+                   ^
+bgp_packet.c: In function ‘bgp_write_proceed’:
+../lib/zebra.h:575:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((((struct fifo *)(F))->next == (struct fifo *)(F)) \
+              ^
+bgp_packet.c:698:17: note: in expansion of macro ‘FIFO_HEAD’
+             if (FIFO_HEAD (&peer->sync[afi][safi]->withdraw))
+                 ^
+../lib/zebra.h:575:14: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((((struct fifo *)(F))->next == (struct fifo *)(F)) \
+              ^
+bgp_packet.c:703:24: note: in expansion of macro ‘FIFO_HEAD’
+             if ((adv = FIFO_HEAD (&peer->sync[afi][safi]->update)) != NULL)
+                        ^
+bgp_packet.c: In function ‘bgp_route_refresh_receive’:
+bgp_packet.c:2247:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                     ok = ((p_end - p_pnt) >= sizeof(u_int32_t)) ;
+                                           ^
+bgp_packet.c:2112:12: warning: variable ‘reserved’ set but not used [-Wunused-but-set-variable]
+     u_char reserved;
+            ^
+bgp_packet.c: In function ‘bgp_capability_msg_parse’:
+bgp_packet.c:2337:17: warning: variable ‘bgp’ set but not used [-Wunused-but-set-variable]
+     struct bgp *bgp;
+                 ^
+make: *** [bgp_packet.o] Error 1

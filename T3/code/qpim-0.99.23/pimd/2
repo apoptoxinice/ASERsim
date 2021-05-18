@@ -1,0 +1,18 @@
+pucDataPtr0 = pucDataPtr;
+        pucDataPtr += 4;
+                pstScdAddr = pstIf->pstSecondaryAddr;
+                        while(pstScdAddr != NULL)
+                                    {
+                                                    PUT_EUADDR(pstScdAddr->stAddr, pucDataPtr);
+                                                                pstScdAddr = pstScdAddr->next;
+                                                                        }
+                                                                                if ((dwDataLen = pucDataPtr - pucDataPtr0 - 4) > 0) 
+                                                                                            {
+                                                                                                            //at least one address is encoded.
+                                                                                                                        PUT_HOSTSHORT(PIMSM_OPTION_TYPE_ADDRESS_LIST, pucDataPtr0);
+                                                                                                                                    PUT_HOSTSHORT(dwDataLen, pucDataPtr0);
+                                                                                                                                            }
+                                                                                                                                                    else
+                                                                                                                                                                {
+                                                                                                                                                                                pucDataPtr = pucDataPtr0; //rewind the pointer
+                                                                                                                                                                                        }

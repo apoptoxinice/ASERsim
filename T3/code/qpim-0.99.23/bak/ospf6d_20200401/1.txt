@@ -1,0 +1,137 @@
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib -I../lib   -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_flood.o -MD -MP -MF .deps/ospf6_flood.Tpo -c -o ospf6_flood.o ospf6_flood.c
+In file included from ../lib/zebra.h:151:0,
+                 from ospf6_flood.c:22:
+ospf6_flood.c: In function ‘ospf6_install_lsa_for_leaving’:
+ospf6_lsa.h:118:88: warning: integer overflow in expression [-Woverflow]
+ #define OSPF6_LSA_IS_SEQWRAP(L) ((L)->header->seqnum == htonl(OSPF_MAX_SEQUENCE_NUMBER + 1))
+                                                                                        ^
+ospf6_flood.c:304:9: note: in expansion of macro ‘OSPF6_LSA_IS_SEQWRAP’
+     if (OSPF6_LSA_IS_SEQWRAP(lsa) &&
+         ^
+ospf6_flood.c: In function ‘ospf6_install_lsa’:
+ospf6_lsa.h:118:88: warning: integer overflow in expression [-Woverflow]
+ #define OSPF6_LSA_IS_SEQWRAP(L) ((L)->header->seqnum == htonl(OSPF_MAX_SEQUENCE_NUMBER + 1))
+                                                                                        ^
+ospf6_flood.c:423:9: note: in expansion of macro ‘OSPF6_LSA_IS_SEQWRAP’
+     if (OSPF6_LSA_IS_SEQWRAP(lsa) &&
+         ^
+ospf6_flood.c: In function ‘ospf6_flood_interface’:
+ospf6_flood.c:660:5: error: invalid storage class for function ‘ospf6_flood_area’
+     ospf6_flood_area (struct ospf6_neighbor *from,
+     ^
+ospf6_flood.c:692:5: error: invalid storage class for function ‘ospf6_flood_process’
+     ospf6_flood_process (struct ospf6_neighbor *from,
+     ^
+ospf6_flood.c:726:5: error: invalid storage class for function ‘ospf6_flood_clear_interface’
+     ospf6_flood_clear_interface (struct ospf6_lsa *lsa, struct ospf6_interface *oi)
+     ^
+ospf6_flood.c:751:5: error: invalid storage class for function ‘ospf6_flood_clear_area’
+     ospf6_flood_clear_area (struct ospf6_lsa *lsa, struct ospf6_area *oa)
+     ^
+ospf6_flood.c:773:5: error: invalid storage class for function ‘ospf6_flood_clear_process’
+     ospf6_flood_clear_process (struct ospf6_lsa *lsa, struct ospf6 *process)
+     ^
+ospf6_flood.c:804:5: error: invalid storage class for function ‘ospf6_acknowledge_lsa_bdrouter’
+     ospf6_acknowledge_lsa_bdrouter (struct ospf6_lsa *lsa, int ismore_recent,
+     ^
+ospf6_flood.c:899:5: error: invalid storage class for function ‘ospf6_acknowledge_lsa_allother’
+     ospf6_acknowledge_lsa_allother (struct ospf6_lsa *lsa, int ismore_recent,
+     ^
+ospf6_flood.c:975:5: error: invalid storage class for function ‘ospf6_acknowledge_lsa’
+     ospf6_acknowledge_lsa (struct ospf6_lsa *lsa, int ismore_recent,
+     ^
+ospf6_flood.c:994:5: error: invalid storage class for function ‘ospf6_is_maxage_lsa_drop’
+     ospf6_is_maxage_lsa_drop (struct ospf6_lsa *lsa, struct ospf6_neighbor *from)
+     ^
+ospf6_flood.c:1242:19: error: invalid storage class for function ‘ospf6_drouter_area_eletcion’
+     static u_char ospf6_drouter_area_eletcion(struct ospf6 *o, u_int32_t adv_router)
+                   ^
+ospf6_flood.c:1267:16: error: invalid storage class for function ‘osfp6_orginate_zone_lsa’
+     static int osfp6_orginate_zone_lsa (struct ospf6_area *oa)
+                ^
+ospf6_flood.c:1346:16: error: invalid storage class for function ‘ospf6_add_path_num_to_list’
+     static int ospf6_add_path_num_to_list(u_int32_t adv_router, u_int32_t neighbor_area_id)
+                ^
+ospf6_flood.c:1438:16: error: invalid storage class for function ‘ospf6_maybe_del_attached_num_from_list’
+     static int ospf6_maybe_del_attached_num_from_list(u_int32_t adv_router, u_int32_t neighbor_area_id)
+                ^
+ospf6_flood.c:1473:16: error: invalid storage class for function ‘ospf6_del_attached_num_from_list’
+     static int ospf6_del_attached_num_from_list(u_int32_t adv_router)
+                ^
+ospf6_flood.c:1549:17: error: invalid storage class for function ‘ospf6_originate_pbr_prefix’
+     static void ospf6_originate_pbr_prefix(struct ospf6_interface *oi, struct in6_addr *linklocal_addr)
+                 ^
+ospf6_flood.c:1566:16: error: invalid storage class for function ‘ospf6_originate_route_for_pbr_neighbor’
+     static int ospf6_originate_route_for_pbr_neighbor(struct ospf6_lsa *lsa, struct ospf6_interface *oi)
+                ^
+ospf6_flood.c:1597:16: error: invalid storage class for function ‘ospf6_process_pbr_link_lsa’
+     static int ospf6_process_pbr_link_lsa(struct ospf6_lsa *lsa , struct ospf6_area *oa)
+                ^
+In file included from ospf6_flood.c:39:0:
+ospf6_flood.c:1893:12: error: invalid storage class for function ‘debug_ospf6_flooding’
+     DEFUN (debug_ospf6_flooding,
+            ^
+../lib/command.h:214:14: note: in definition of macro ‘DEFUN_CMD_FUNC_DECL’
+   static int funcname (struct cmd_element *, struct vty *, int, const char *[]);
+              ^
+ospf6_flood.c:1893:5: note: in expansion of macro ‘DEFUN’
+     DEFUN (debug_ospf6_flooding,
+     ^
+ospf6_flood.c:1893:12: error: ‘debug_ospf6_flooding’ undeclared (first use in this function)
+     DEFUN (debug_ospf6_flooding,
+            ^
+../lib/command.h:207:13: note: in definition of macro ‘DEFUN_CMD_ELEMENT’
+     .func = funcname, \
+             ^
+ospf6_flood.c:1893:5: note: in expansion of macro ‘DEFUN’
+     DEFUN (debug_ospf6_flooding,
+     ^
+ospf6_flood.c:1893:12: note: each undeclared identifier is reported only once for each function it appears in
+     DEFUN (debug_ospf6_flooding,
+            ^
+../lib/command.h:207:13: note: in definition of macro ‘DEFUN_CMD_ELEMENT’
+     .func = funcname, \
+             ^
+ospf6_flood.c:1893:5: note: in expansion of macro ‘DEFUN’
+     DEFUN (debug_ospf6_flooding,
+     ^
+ospf6_flood.c:1893:12: error: invalid storage class for function ‘debug_ospf6_flooding’
+     DEFUN (debug_ospf6_flooding,
+            ^
+../lib/command.h:217:14: note: in definition of macro ‘DEFUN_CMD_FUNC_TEXT’
+   static int funcname \
+              ^
+ospf6_flood.c:1893:5: note: in expansion of macro ‘DEFUN’
+     DEFUN (debug_ospf6_flooding,
+     ^
+ospf6_flood.c:1905:12: error: invalid storage class for function ‘no_debug_ospf6_flooding’
+     DEFUN (no_debug_ospf6_flooding,
+            ^
+../lib/command.h:214:14: note: in definition of macro ‘DEFUN_CMD_FUNC_DECL’
+   static int funcname (struct cmd_element *, struct vty *, int, const char *[]);
+              ^
+ospf6_flood.c:1905:5: note: in expansion of macro ‘DEFUN’
+     DEFUN (no_debug_ospf6_flooding,
+     ^
+ospf6_flood.c:1905:12: error: ‘no_debug_ospf6_flooding’ undeclared (first use in this function)
+     DEFUN (no_debug_ospf6_flooding,
+            ^
+../lib/command.h:207:13: note: in definition of macro ‘DEFUN_CMD_ELEMENT’
+     .func = funcname, \
+             ^
+ospf6_flood.c:1905:5: note: in expansion of macro ‘DEFUN’
+     DEFUN (no_debug_ospf6_flooding,
+     ^
+ospf6_flood.c:1905:12: error: invalid storage class for function ‘no_debug_ospf6_flooding’
+     DEFUN (no_debug_ospf6_flooding,
+            ^
+../lib/command.h:217:14: note: in definition of macro ‘DEFUN_CMD_FUNC_TEXT’
+   static int funcname \
+              ^
+ospf6_flood.c:1905:5: note: in expansion of macro ‘DEFUN’
+     DEFUN (no_debug_ospf6_flooding,
+     ^
+ospf6_flood.c:1933:5: error: expected declaration or statement at end of input
+     }
+     ^
+make: *** [ospf6_flood.o] Error 1

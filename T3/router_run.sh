@@ -29,60 +29,60 @@ if [ $t -ne 0 ];then
     exit 0
 fi
 
-cd /root/T3/
+cd /home/ice/ASERsim/T3
 ./vlan.sh $id
 
 
 #exit 0
 :<<!
-cd /root/T3/config_dir/ospf6d
+cd /home/ice/ASERsim/T3/config_dir/ospf6d
 ./router_cp.sh
 
 
-cd /root/T3/config_dir/ospf6dplus
+cd /home/ice/ASERsim/T3/config_dir/ospf6dplus
 ./router_cp.sh
 
-cd /root/T3/config_dir/zebra
+cd /home/ice/ASERsim/T3/config_dir/zebra
 ./router_cp.sh
 
-cd /root/T3/config_dir/bgpd
+cd /home/ice/ASERsim/T3/config_dir/bgpd
 ./router_cp.sh
 
-cd /root/T3/config_dir/gdb
+cd /home/ice/ASERsim/T3/config_dir/gdb
 ./router_cp.sh
 !
 
 
 #:<<!
-cd /root/T3/program_dir/ospf6d
+cd /home/ice/ASERsim/T3/program_dir/ospf6d
 cp ./ospf6d ./ospf6d_$router -f
 
-cd /root/T3/program_dir/ospf6dplus
+cd /home/ice/ASERsim/T3/program_dir/ospf6dplus
 cp ./ospf6d ./ospf6dplus_$router -f
 
-cd /root/T3/program_dir/zebra
+cd /home/ice/ASERsim/T3/program_dir/zebra
 cp ./zebra ./zebra_$router -f
 
-cd /root/T3/program_dir/bgpd
+cd /home/ice/ASERsim/T3/program_dir/bgpd
 cp ./bgpd ./bgpd_$router -f
 #!
 
 #:<<!
 let zebra_p=3000+id
 echo $zebra_p
-/root/T3/program_dir/zebra/zebra_$router -d -f /root/T3/config_dir/zebra/zebra_$router.conf -i /var/run/zebra_$router.pid -z /var/run/zserv_$router.api -P $zebra_p
+/home/ice/ASERsim/T3/program_dir/zebra/zebra_$router -d -f /home/ice/ASERsim/T3/config_dir/zebra/zebra_$router.conf -i /var/run/zebra_$router.pid -z /var/run/zserv_$router.api -P $zebra_p
 
 sleep 5
 
 let ospf6d_p=4000+id
 echo $ospf6d_p
-/root/T3/program_dir/ospf6d/ospf6d_$router -d -f /root/T3/config_dir/ospf6d/ospf6d_$router.conf -i /var/run/ospf6d_$router.pid -z /var/run/zserv_$router.api -P $ospf6d_p
+/home/ice/ASERsim/T3/program_dir/ospf6d/ospf6d_$router -d -f /home/ice/ASERsim/T3/config_dir/ospf6d/ospf6d_$router.conf -i /var/run/ospf6d_$router.pid -z /var/run/zserv_$router.api -P $ospf6d_p
 
 let ospf6dplus_p=5000+id
 echo $ospf6dplus_p
 #/root/T3/program_dir/ospf6dplus/ospf6dplus_$router -d -f /root/T3/config_dir/ospf6dplus/ospf6dplus_$router.conf -i /var/run/ospf6dplus_$router.pid -z /var/run/zserv_$router.api -P $ospf6dplus_p
 
-gdb --args /root/T3/program_dir/ospf6dplus/ospf6dplus_$router -f /root/T3/config_dir/ospf6dplus/ospf6dplus_$router.conf -i /var/run/ospf6dplus_$router.pid -z /var/run/zserv_$router.api -P $ospf6dplus_p 0</root/T3/config_dir/gdb/gdb_cmd_$router.txt &
+gdb --args /home/ice/ASERsim/T3/program_dir/ospf6dplus/ospf6dplus_$router -f /home/ice/ASERsim/T3/config_dir/ospf6dplus/ospf6dplus_$router.conf -i /var/run/ospf6dplus_$router.pid -z /var/run/zserv_$router.api -P $ospf6dplus_p 0</home/ice/ASERsim/T3/config_dir/gdb/gdb_cmd_$router.txt &
 
 
 
@@ -90,11 +90,11 @@ gdb --args /root/T3/program_dir/ospf6dplus/ospf6dplus_$router -f /root/T3/config
 :<<!
 let bgpd_p=6000+id
 echo $bgpd_p
-/root/T3/program_dir/bgpd/bgpd_$router -d -f /root/T3/config_dir/bgpd/bgpd_$router.conf -i /var/run/bgpd_$router.pid -z /var/run/zserv_$router.api -P $bgpd_p
+/home/ice/ASERsim/T3/program_dir/bgpd/bgpd_$router -d -f /home/ice/ASERsim/T3/config_dir/bgpd/bgpd_$router.conf -i /var/run/bgpd_$router.pid -z /var/run/zserv_$router.api -P $bgpd_p
 !
 
 #/root/T3/tc.sh
 
 exit 0
-cd /root/T3/up_down
+cd /home/ice/ASERsim/T3/up_down
 ./test.sh
